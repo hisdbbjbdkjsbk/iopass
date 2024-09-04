@@ -1,0 +1,82 @@
+.follow {
+  &__body {
+    visibility: hidden;
+
+    width: 100%;
+    max-width: 93rem;
+    padding: 4.5rem 15rem;
+
+    border-radius: 8rem;
+    background-color: rgba($color: $color-brand-1, $alpha: 0.8);
+  }
+}
+.socialnet {
+  display: grid;
+  justify-content: center;
+
+  width: 100%;
+
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 18%;
+  &__link {
+    display: flex;
+
+    height: 2.5rem;
+    img {
+      pointer-events: none;
+    }
+  }
+}
+
+.overlay .follow__body {
+  visibility: visible;
+}
+
+/* MOBILE FOLLOW */
+
+.open-follow .mobile-menu__item--follow {
+  position: absolute; // ++
+  // top: 0;
+  // display: block; // On click
+
+  visibility: visible; // On click
+
+  padding-top: 0; // ++
+}
+
+.mobile-menu__btn--follow {
+}
+
+.mobile-follow {
+  // display: none; // ++
+  visibility: hidden;
+}
+.open-follow .mobile-follow {
+  // display: block; // ++
+  visibility: visible;
+  &__body {
+    min-height: 230%; // ++
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .socialnet {
+    display: grid;
+
+    width: 0;
+    min-height: 100vh;
+
+    grid-template-columns: 5rem;
+    justify-items: center;
+    gap: 18%;
+    &__link {
+      display: flex;
+
+      height: 2.5rem;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+}
+
+/* -------------------------------- */

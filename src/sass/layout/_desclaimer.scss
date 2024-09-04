@@ -1,0 +1,92 @@
+.desclaimer {
+  &__body {
+    visibility: hidden;
+
+    max-width: 105rem;
+    padding: 8rem 7.2rem;
+
+    letter-spacing: 6px;
+
+    color: $text-color-white;
+    border-radius: 8rem;
+    background-color: rgba($color-brand-1, 0.8);
+
+    font-family: 'Inter';
+  }
+
+  &__title {
+    padding-bottom: 3rem;
+
+    text-align: center;
+    letter-spacing: inherit;
+    text-transform: uppercase;
+
+    color: inherit;
+
+    font-size: $default-font-size;
+    font-weight: 800;
+    line-height: 3rem;
+  }
+
+  &__text {
+    padding-bottom: 6.5rem;
+
+    text-align: center;
+    letter-spacing: inherit;
+
+    color: inherit;
+
+    font-size: $default-font-size;
+    font-weight: 500;
+    line-height: 1.9rem;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.overlay .desclaimer__body {
+  visibility: visible;
+}
+
+@media screen and (max-width: 768px) {
+  .desclaimer {
+    &__body {
+      padding: 4rem;
+
+      letter-spacing: 2px;
+    }
+
+    &__title {
+      padding-bottom: 2rem;
+
+      line-height: 1.6rem;
+    }
+
+    &__text {
+      padding-bottom: 4.8rem;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .desclaimer {
+    &__body {
+      padding: 3.2rem;
+
+      letter-spacing: 1.1px;
+    }
+
+    &__title {
+      padding-bottom: 2rem;
+
+      line-height: 1.2;
+    }
+
+    &__text {
+      padding-bottom: 1.6rem;
+
+      font-size: 1.2rem;
+      line-height: 1.2;
+    }
+  }
+}

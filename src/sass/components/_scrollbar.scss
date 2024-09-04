@@ -1,0 +1,15 @@
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0.5rem rgb(219, 211, 211);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: $color-brand-1;
+}

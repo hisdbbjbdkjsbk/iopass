@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', {"title":"IOPASS - Home"})
+  <body>
+    <div class="curtains">
+      <div class="preloader">
+      </div>
+      <div class="curtain-1"></div>
+      <div class="curtain-2"></div>
+    </div>
+    <div class="fullscreen scroll-lock">
+      <div class="cursor"></div>
+      <div class="cursor-tray"></div>
+      <audio
+        class="audio-player"
+        src="sounds/click.wav"
+        muted
+        id="click"
+      ></audio>
+      <audio
+        class="audio-player"
+        src="sounds/hover.wav"
+        muted
+        id="hover"
+      ></audio>
+      @@include('html/header.html',{})
+      <div class="fullscreen__body">
+        <h1 class="fullscreen__title main-title">comming soon</h1>
+      </div>
+      <div class="fullscreen__elem">
+        <video class="video" id="video-bg" poster="img/poster.jpg" autoplay loop muted>
+          <!-- <source src="video/home-bg.webm" type="video/webm" /> -->
+          <!-- <source src="video/home-bg.mp4" type="video/mp4" /> -->
+        </video>
+      </div>
+      <div class="desclaimer">
+        <section class="desclaimer__body">
+          <h2 class="desclaimer__title">desclaimer</h2>
+          <p class="desclaimer__text">
+            This website and all content available through this website are
+            provided to users "as is" without any express warranties or
+            representations of any kind. iopass, disclaims all representations,
+            warranties, terms and conditions relating to this website and all
+            content. creative clout design.
+          </p>
+          <p class="desclaimer__text">
+            iopass. shall not be liable for any damages arising out of or
+            related to the access or use of the Website by its visitors. Any use
+            of the content and trademarks including (but not limited to)
+            reproduction, publication and any other form of exploitation of
+            parts of the content designed by the Website without express consent
+            is prohibited. Previews from creative clout design team.
+            Unauthorized use of the Website, Content, trademarks, or other
+            intellectual and/or industrial property owned by iopass , It may
+            result in monetary damages and other civil and criminal penalties
+            for infringement of copyrights, trademarks, and other intellectual
+            property rights.
+          </p>
+        </section>
+      </div>
+      <div class="follow">
+        <div class="follow__body">
+          <div class="socialnet">
+            <a href="#" class="socialnet__link" data-point="true">
+              <img src="img/icons/icons.svg#vimeo" />
+            </a>
+            <a href="#" class="socialnet__link" data-point="true">
+              <img src="img/icons/icons.svg#youtube" />
+            </a>
+            <a href="#" class="socialnet__link" data-point="true"
+              ><img src="img/icons/icons.svg#knet" />
+            </a>
+            <a href="#" class="socialnet__link" data-point="true"
+              ><img src="img/icons/icons.svg#facebook" />
+            </a>
+            <a href="#" class="socialnet__link" data-point="true">
+              <img src="img/icons/icons.svg#instagram" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="mobile mobile-footer-wrapper">
+      </div> -->
+        @@include('html/footer.html',{})
+      <div class="block-buttons">
+        <button class="btn btn--follow" data-point="true">
+          <img src="img/icons/icons.svg#follow" />
+        </button>
+        <button data-point="true" class="btn btn--desclaimer">
+          desclaimer
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

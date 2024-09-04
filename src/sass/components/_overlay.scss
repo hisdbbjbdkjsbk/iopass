@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the overlay component.
+// -----------------------------------------------------------------------------
+
+.overlay {
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  visibility: visible;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+  padding: 0 3.5rem;
+
+  // background-color: rgba($color: $color-primary, $alpha: 0.5);
+}
+
+@media screen and (max-width: 768px) {
+  .overlay {
+    padding: 0 2rem;
+  }
+}

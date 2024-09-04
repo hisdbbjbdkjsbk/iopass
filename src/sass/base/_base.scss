@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  font-size: 62.5%; /* Установка в корне в процентах дает возможность человеку со слабым зрением меня в настройках браузера размер шрифта по-умолчанию (например слабое зрение). Изменения отразятся и на страницах данного сайта */
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $color-primary;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+body,
+button,
+a {
+  cursor: none;
+}
+
+a,
+button {
+  text-decoration: none;
+  text-transform: inherit;
+
+  color: inherit;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+  button,
+  a {
+    cursor: pointer;
+  }
+}

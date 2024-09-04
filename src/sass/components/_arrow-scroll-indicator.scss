@@ -1,0 +1,46 @@
+/* scroll indicator styling */
+
+#arrow.disable {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+#arrow {
+    text-align: center;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    margin-left: -2.5rem;
+    z-index: 999;
+    right: 4%;
+    bottom: 10vh;
+    width: 5rem;
+    height: 5rem;
+    // border: 1px solid red;
+    cursor: pointer;
+    transform: scale(0.8);
+    transition: all 0.8s ease-out;
+    backface-visibility: hidden; /* hack для устранения тряски елементов во ремя анимации */
+    animation: fade_move_down_1 2s ease-in-out infinite;
+    animation-fill-mode: backwards;
+}
+#arrow:hover {
+    cursor: pointer;
+    transform: scale(1);
+}
+.icon-arrow-down {
+    margin: 0 auto;
+    display: block;
+    fill: $color-primary;
+    height: 3rem;
+}
+.dva.icon-arrow-down {
+    transform: translateY(-1.8rem);
+}
+.white-menu .icon-arrow-down {
+    fill: $color-primary;
+    transition: all 0.8s ease-out;
+}
+.black-menu .icon-arrow-down {
+    fill: $color-secondary;
+    transition: all 0.8s ease-out;
+}

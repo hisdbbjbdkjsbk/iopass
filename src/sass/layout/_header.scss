@@ -1,0 +1,260 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+}
+
+.nav {
+  display: grid;
+
+  padding: 2.4rem 0;
+
+  grid-template-columns: 1fr 1.8fr;
+  grid-template-rows: auto;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: all 3s;
+
+  gap: 1.5rem;
+  &__item {
+    color: $text-color-white;
+
+    font-size: $default-font-size;
+  }
+
+  &__button {
+    font-family: Andromeda;
+    font-size: $default-font-size;
+  }
+
+  &__link {
+    color: inherit;
+
+    font-family: Andromeda;
+    font-size: inherit;
+  }
+}
+.main-menu {
+  transition: all 1s;
+  transform: translateY(0);
+
+  opacity: 1;
+}
+.getout-top.main-menu {
+  transform: translateY(-250%);
+
+  opacity: 0;
+}
+
+/* ---------------------------------- */
+
+/* HEADER - MOBILE VER. */
+
+// .mobile-menu-wrapper {}
+.mobile-menu-trigger {
+  position: absolute;
+  z-index: 3;
+  top: 2.5rem;
+  right: 2.5rem;
+
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 4rem;
+  height: 2.5rem;
+
+  cursor: pointer;
+  transition: transform 1s, opacity 1s;
+  transform: translateY(0);
+
+  opacity: 1;
+}
+.getout-top.mobile-menu-trigger {
+  visibility: hidden;
+
+  transform: translateY(-250%);
+
+  opacity: 0;
+}
+.line {
+  width: 100%;
+  height: 1px;
+
+  transition: all 1s;
+  pointer-events: none;
+
+  background-color: $color-primary;
+
+  &:nth-of-type(2) {
+    width: 3.2rem;
+  }
+  &:nth-of-type(3) {
+    width: 2.7rem;
+  }
+  &:nth-of-type(4) {
+    width: 1.5rem;
+  }
+}
+.mobile-menu-trigger.active-trigger {
+  .line {
+    &:nth-of-type(1) {
+      width: 60%;
+
+      transform: translate(0.5rem, 1.8rem);
+    }
+    &:nth-of-type(2) {
+      transform: translateX(150%);
+    }
+    &:nth-of-type(3) {
+      transform: translateX(-150%);
+    }
+    &:nth-of-type(4) {
+      width: 17rem;
+
+      transform: rotate(-90deg) translate(3rem, 1rem);
+    }
+  }
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100vh;
+  padding-top: 12rem;
+  padding-left: 4rem;
+
+  transition: clip-path 1s cubic-bezier(0.8, 0, 0.1, 1), opacity 0.5s ease 1s;
+
+  background-color: $color-mobile-menu;
+
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  mix-blend-mode: multiply;
+  &__body {
+    position: relative;
+
+    height: 75vh;
+    padding-left: 1rem;
+    // padding-right: 0.9375rem;
+
+    color: $text-color-white;
+  }
+  &__container {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    height: 75vh;
+    padding-top: 10rem;
+  }
+
+  &__item {
+    display: block;
+
+    width: 100%;
+    height: 5rem;
+    margin: 55rem 0;
+    padding: 1rem 0;
+
+    text-transform: uppercase;
+
+    color: $text-color-white;
+
+    font-family: Andromeda;
+    font-size: 1rem;
+    font-weight: 500;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-top: 0;
+      margin-bottom: 60rem;
+    }
+  }
+
+  &__target,
+  a,
+  button {
+    display: inline-block;
+
+    padding-left: 2rem;
+
+    transition: font-size 0.3s, opacity 0.3s;
+    
+    opacity: 0;
+    background-color: transparent;
+  }
+}
+
+.mobile-menu__target.mobile-menu__item--active {
+  opacity: 1;
+  // font-size: 3.2rem;
+}
+
+.mobile-menu-trigger.active-trigger + .mobile-menu {
+  transition: clip-path 1s cubic-bezier(0.8, 0, 0.1, 1) 0s;
+
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.getout-top.mobile-menu-trigger {
+  transform: translateY(-250%);
+
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    & .container {
+      padding: 0 3.2rem;
+    }
+  }
+  .open-follow.mobile-menu {
+    padding-top: 50%; // ++
+  }
+  .open-follow .mobile-menu__body {
+    height: 0; // ++
+    min-height: 100%; // ++
+  }
+  .open-follow .mobile-menu__container {
+    position: absolute; // ++
+  }
+  .open-follow .mobile-menu__item {
+    // display: none; // ++
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .open-follow.mobile-menu {
+    // padding-top: 60%; // ++
+  }
+  .mobile-menu {
+    // padding-left: 2.5rem;
+    &__item {
+      // font-size: 32px;
+    }
+
+    &__target {
+      // font-size: 32px;
+    }
+  }
+}
+
+/* ---------------------------------- */

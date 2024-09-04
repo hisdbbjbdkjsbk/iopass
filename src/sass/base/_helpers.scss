@@ -1,0 +1,188 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  max-width: $max-width; /* 1 */
+  height: 100%;
+  margin-left: auto; /* 2 */
+  margin-right: auto; /* 2 */
+  padding-left: 7.5rem; /* 3 */
+  padding-right: 7.5rem; /* 3 */
+  width: 100%; /* 1 */
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.mobile {
+  display: none;
+}
+
+.popup-wrapper {
+  position: fixed;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+body.scroll-lock {
+  overflow: hidden;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+/** 
+ * Classes for validation form 
+ */
+.form-control {
+  &:focus {
+    // color: #495057;
+    // border-color: #80bdff;
+    outline: 0;
+    // background-color: #fff;
+    // box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  &:disabled,
+  &[readonly] {
+    opacity: 1;
+    background-color: #e9ecef;
+  }
+}
+
+select.form-control:focus::-ms-value {
+  color: #495057;
+  background-color: $color-primary;
+}
+
+.was-validated .form-control:valid {
+  padding-right: calc(1.5em + 0.75rem);
+
+  border-color: #28a745;
+  /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center right calc(0.375em + 0.1875rem);
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem); */
+}
+
+/* .was-validated .form-control:valid:not(:placeholder-shown):focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(22, 199, 63, 0.5);
+} */
+
+.was-validated .form-control:valid:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(22, 199, 63, 0.5);
+}
+
+.was-validated .form-control:valid ~ .valid-feedback {
+  display: block;
+}
+
+.was-validated textarea.form-control:valid {
+  padding-right: calc(1.5em + 1.2rem);
+
+  /* background-position: top calc(0.375em + 0.1875rem) right
+    calc(0.375em + 0.1875rem); */
+}
+
+.was-validated .form-control:invalid {
+  padding-right: calc(1.5em + 1.2rem);
+
+  border-color: #dc3545;
+  /* background-image: url("../img/icons/icons.svg#warning-sign");
+  background-repeat: no-repeat;
+  background-position: center right calc(0.375em + 0.1875rem);
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem); */
+}
+
+.was-validated .form-control:invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(218, 18, 38, 0.575);
+}
+
+
+.was-validated .form-control:invalid ~ .invalid-feedback {
+  display: block;
+}
+
+.was-validated textarea.form-control:invalid {
+  padding-right: calc(1.5em + 1.2rem);
+
+  /* background-position: top calc(0.375em + 0.1875rem) right
+  calc(0.375em + 0.1875rem); */
+}
+
+.invalid-feedback {
+  display: none;
+
+  align-self: flex-start;
+
+  width: 100%;
+  margin-top: .4rem;
+
+  color: #dc3545;
+  font-weight: 500;
+  font-size: 80%;
+}
+
+.invalid-feedback--component {
+  position: absolute;
+  top: -2.5rem;
+}
+
+/* ----- КЛАССЫ ДЛЯ ВАЛИДАЦИИ ФОРМЫ - конец ----- */
+
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}

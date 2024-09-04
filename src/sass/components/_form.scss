@@ -1,0 +1,180 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the form component.
+// -----------------------------------------------------------------------------
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100vh;
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__overlay {
+    position: relative;
+
+    display: flex;
+    visibility: hidden;
+    align-items: center;
+    flex: 1 1 auto;
+    justify-content: center;
+
+    width: 0;
+    height: 0;
+
+    transition: background-color 1.5s;
+
+    background-color: rgba($color: $color-secondary, $alpha: 0);
+  }
+  &__wrapper {
+    width: inherit;
+    padding: 4.8rem 0 4.8rem;
+
+    background-color: $color-secondary;
+  }
+  &__text {
+    padding: 0.5rem 0 6rem;
+
+    color: $text-color-white;
+
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 4.4rem;
+    address {
+      font-style: normal;
+    }
+  }
+  &__component {
+    position: relative;
+
+    display: grid;
+    // overflow: hidden;
+    // width: 50%;
+
+    min-width: 26rem;
+
+    border-radius: 2.5rem;
+    background-color: $color-primary;
+
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto;
+    & button {
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(1px);
+
+      background-color: $color-brand-1;
+
+      font-size: $default-font-size;
+    }
+    & button.motion {
+      transform: translateX(-70%);
+    }
+  }
+  &__email {
+    padding: 1.5rem;
+
+    border: none;
+    border-radius: 2.5rem;
+    outline: none;
+  }
+}
+
+.visible.form__overlay {
+  visibility: visible;
+
+  width: 100%;
+  height: auto;
+
+  background-color: rgba($color: $color-secondary, $alpha: 0.95);
+}
+
+// Contact us form
+.contact-us {
+  transition: all 0.5s;
+  &__body {
+    width: 55vw;
+    height: 40vh;
+
+    cursor: pointer;
+
+    border-radius: 4.5rem;
+    box-shadow: 0 .4rem .4rem rgba($color-secondary, 0.25);
+  }
+  &__message {
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem;
+
+    resize: none;
+    transition: all 0.3s;
+
+    color: $text-color-white;
+    border: none;
+    border-radius: inherit;
+    outline: none;
+    background: linear-gradient(150deg, #1d0d84 34%, #c41919 88%);
+    background-size: 120%;
+    opacity: .6;
+
+    font-size: $default-font-size;
+    &::placeholder {
+      color: $text-color-white;
+    }
+    &:focus {
+      background-position: bottom 100% left 100%;
+      box-shadow: 0 0.2rem 15rem #1d0d84;
+    }
+  }
+  & button {
+    position: absolute;
+    right: 8rem;
+    bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-us {
+    &__body {
+      width: 80vw;
+    }
+    & button {
+      top: 2.5rem;
+      right: 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form {
+    &__container {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column-reverse;
+
+      padding: 0 3.2rem 4rem;
+    }
+    &__wrapper {
+      padding: 3.2rem 0 3.2rem;
+    }
+    &__text {
+      padding: 1rem 0 2.5rem;
+
+      font-size: 2rem;
+      line-height: 3.2rem;
+    }
+  }
+  .contact-us {
+    &__body {
+      height: 30vh;
+    }
+    & button {
+      top: 2rem;
+      right: 3rem;
+    }
+  }
+}
+
+/* ------------------------------------------- */

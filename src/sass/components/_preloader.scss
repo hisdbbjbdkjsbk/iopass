@@ -1,0 +1,106 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the preloader component.
+// -----------------------------------------------------------------------------
+
+.preloader {
+  position: fixed;
+  z-index: 10000 !important;
+  top: 50%;
+  left: 50%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  transform: translate(-50%, -50%);
+
+  background-color: $color-primary;
+  background-image: url('../img/preloader.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 25rem;
+  &__text {
+    display: block;
+
+    margin-top: 35vh;
+
+    letter-spacing: 3.5rem;
+
+    color: $text-color-white;
+
+    font-family: Andromeda, sans-serif;
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 4.7rem;
+  }
+}
+
+.preloader.loaded {
+  z-index: -1000;
+
+  opacity: 0;
+
+  font-size: 0;
+}
+
+.small-preloader {
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  visibility: hidden;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  transition: opacity 0.9s;
+
+  opacity: 0;
+  background-color: rgba($color-secondary, 0.7);
+  img {
+    width: 6rem;
+    height: 6rem;
+
+    animation: scale 4s infinite;
+  }
+  &__text {
+    display: block;
+
+    letter-spacing: 2rem;
+
+    color: $text-color-white;
+
+    font-family: Andromeda, sans-serif;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 3.5;
+  }
+}
+
+.small-preloader.loading {
+  z-index: 1000;
+
+  visibility: visible;
+
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .preloader {
+    transform: translate(-50%, -50%);
+
+    background-image: url('../img/mob-preloader.gif');
+    background-size: auto 25rem;
+  }
+}

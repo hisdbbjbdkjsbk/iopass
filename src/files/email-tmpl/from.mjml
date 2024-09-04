@@ -1,0 +1,37 @@
+<mjml>
+  <mj-body background-color="#ffffff" font-size="13px">
+    <mj-section background-color="#ffffff" padding-bottom="0px" padding-top="0">
+      <mj-column vertical-align="top" width="100%">
+        <mj-image src="img/logo-light.png" alt="logo" align="center" border="none" width="600px" padding-left="0px" padding-right="0px" padding-bottom="0px" padding-top="0"></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#c41919" vertical-align="top" padding-bottom="0px" padding-top="0">
+      <mj-column vertical-align="top" width="100%">
+        <mj-text align="left" color="#ffffff" font-size="35px" font-weight="bold" font-family="open Sans Helvetica, Arial, sans-serif" padding-left="25px" padding-right="25px" padding-bottom="30px" padding-top="50px">IOPASS site visitor message</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#1d0d84" padding-bottom="20px" padding-top="20">
+
+      <mj-column vertical-align="middle" width="100%">
+
+        <mj-text align="left" color="#ffffff" font-family="open Sans Helvetica, Arial, sans-serif" padding-left="25px" padding-right="25px" padding-bottom="25px"><span style="color:#FEEB35; font-size: 22px;">For Iopass team</span>
+        </mj-text>
+        <mj-text align="left" color="#ffffff" font-family="open Sans Helvetica, Arial, sans-serif" padding-left="25px" padding-right="25px">
+          <span style="font-size: 18px;">Site visitor message:</span>
+        </mj-text>
+
+        <mj-text align="left" color="#ffffff" font-size="15px" font-family="open Sans Helvetica, Arial, sans-serif" padding-left="25px" padding-right="25px" line-height="1.5"><p style="padding: 15px; border: 1px solid lightgrey; border-radius: 8px; font-style: italic;">We&apos;re really excited you&apos;ve decided to give us a try. In case you have any questions, feel free to reach out to us at [[ContactEmail]]. You can login to your account with your username [[UserName]]</p></mj-text>
+        </mj-column>
+      <mj-column vertical-align="middle" width="100%">
+        <mj-text align="left" color="#ffffff" font-size="22px" font-family="open Sans Helvetica, Arial, sans-serif" padding-left="25px" padding-right="25px">
+          <br />
+          <span style="font-size: 18px;">Site visitor contact E-mail: </span>
+          <span style="font-size: 20px; display: inline-block; padding: 10px 15px; background-color: grey; border-radius: 6px;">geis@i.com</span>
+        </mj-text>
+        <mj-divider border-width="1px" border-style="dashed" border-color="lightgrey" />
+
+        <mj-text align="left" color="#ffffff" font-size="15px" font-family="open Sans Helvetica, Arial, sans-serif" padding-left="25px" padding-right="25px">Thanks, <br /> The Visiter</mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

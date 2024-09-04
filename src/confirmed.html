@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', {"title":"IOPASS - Confirmed"})
+  <body>
+      <div class="cursor"></div>
+      <div class="cursor-tray"></div>
+      <audio
+        class="audio-player"
+        src="sounds/click.wav"
+        muted
+        id="click"
+      ></audio>
+      <audio
+        class="audio-player"
+        src="sounds/hover.wav"
+        muted
+        id="hover"
+      ></audio>
+    <div class="confirmed">
+      <div class="confirmed__body">
+        <p class="confirmed__text">Thanks we will contact with you soon</p>
+        <a href="index.html" data-point="true" class="btn btn--back">
+          <span>Back</span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<footer class="footer">
+  <div class="small-preloader">
+    <img src="img/small-preloader.png" alt="loader">
+    <span class="small-preloader__text">sending...</span>
+  </div>
+  <form
+    class="form form-contact needs-validation"
+    data-form="contact_us"
+    novalidate
+    method="POST"
+    action="./sendmail.php"
+  >
+    <div class="form__overlay">
+      <div class="contact-us">
+        <div class="contact-us__body">
+          <textarea
+            class="contact-us__message form-control"
+            name="message"
+            id="msg"
+            placeholder="message"
+            maxlength="200"
+            required
+            pattern="[a-z][0-9]"
+          ></textarea>
+          <div class="invalid-feedback">Enter your message</div>
+        </div>
+        <button class="btn btn--back" data-point="true">
+          <span>back</span>
+        </button>
+      </div>
+    </div>
+    <div class="form__wrapper">
+      <div class="form__container container">
+        <div class="form__content-wrapper">
+          <div class="form__text">
+            <address>
+              <p>Kyiv</p>
+              <p>Padol, 367</p>
+              <p>Ukraine 01014</p>
+            </address>
+          </div>
+          <div class="form__component">
+            <input
+              type="email"
+              class="form__email form-control"
+              placeholder="E-mail"
+              name="email"
+              maxlength="100"
+              required
+            />
+            <button class="btn btn--get" data-point="true" type="submit">
+              Sent
+            </button>
+            <div class="invalid-feedback invalid-feedback--component">
+              Enter your email
+            </div>
+          </div>
+        </div>
+        <div class="logo">
+          <img src="img/logo-light.png" alt="logo" class="logo" />
+        </div>
+      </div>
+    </div>
+  </form>
+  <form
+    class="form form-getcard needs-validation"
+    data-form="getcard"
+    novalidate
+    method="POST"
+    action="./sendmail.php"
+  >
+    <div class="form__overlay" data-point="true"></div>
+    <div class="form__wrapper">
+      <div class="form__container container">
+        <div class="form__content-wrapper">
+          <div class="form__text">
+            <p>Contact our team iopass</p>
+            <p>E-Mail address</p>
+          </div>
+          <div class="form__component">
+            <input
+              type="email"
+              class="form__email form-control"
+              placeholder="E-mail"
+              name="email"
+              maxlength="100"
+              required
+            />
+            <button class="btn btn--get" data-point="true" type="submit">
+              Get card
+            </button>
+            <div class="invalid-feedback invalid-feedback--component">
+              Enter your email
+            </div>
+          </div>
+        </div>
+        <div class="logo">
+          <img src="img/logo-light.png" alt="logo" class="logo" />
+        </div>
+      </div>
+    </div>
+  </form>
+</footer>
